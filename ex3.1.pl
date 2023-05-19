@@ -10,8 +10,8 @@
 @filenames = <@ARGV>;
 
 @less_than_1K = grep { ((stat $_)[7]) < 1000 } @filenames; # Investigate further why we need 2 parens here. 
+@pretty_print = map { "   " . $_ . "\n"} @less_than_1K;
 
-foreach (@less_than_1K) {
-	print "    " . $_ . "\n";
-}
+print @pretty_print;
+
 
