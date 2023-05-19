@@ -11,5 +11,7 @@
 
 @less_than_1K = grep { ((stat $_)[7]) < 1000 } @filenames; # Investigate further why we need 2 parens here. 
 
-print @less_than_1K;
+foreach (@less_than_1K) {
+	print "    " . $_ . "\n";
+}
 
