@@ -27,7 +27,6 @@ check_required_items("Gilligan", \@gilligan);
 # The => notation is seen in hash, but apparently you can use this
 # in list context too!
 
-
 my @skipper_with_name   = ('Skipper' => \@skipper);
 my @professor_with_name = ('The Professor' => \@professor);
 my @gilligan_with_name  = ('Gilligan' => \@gilligan);
@@ -37,13 +36,7 @@ my @all_with_names = (
         \@professor_with_name,
         \@gilligan_with_name);
 
-
-# Having problems with this one.
-
-print Dumper(@all_with_names); 
-my @foo = (${$all_with_names[2]});
-print @foo;
-
+print @{$all_with_names[2]});
 
 sub check_required_items {
         my $who = shift;
