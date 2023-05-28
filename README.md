@@ -1,2 +1,2 @@
-# llama-book-exercises
-Exercises from Intermediate Perl (Llama book)
+#alpaca-book-exercises
+Exercises from Intermediate Perl 
